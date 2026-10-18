@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surayya Farhat Imtiaz · Boutique, Rentals & Stitching School</title>
+<meta name="description" content="Custom stitching, bridal and party wear rentals, and a stitching school — Surayya Farhat Imtiaz.">
+<meta name="theme-color" content="#5E1A2E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235E1A2E'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='26' font-style='italic' text-anchor='middle' fill='%23E8C575'%3ESFI%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-mode="customer">
+
+<!-- ================= CUSTOMER SITE ================= -->
+<div id="site">
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="Surayya Farhat Imtiaz — home">
+      <span class="mono">SFI</span>
+      <span class="brand-t"><b>Surayya Farhat Imtiaz</b><small>Boutique · Atelier · Academy</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#rentals">Rentals</a>
+      <a href="#stitching">Custom Stitching</a>
+      <a href="#academy">Academy</a>
+      <a href="#track">Track Order</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-ghost sm" id="btnAccount"><span data-i="user"></span> My Account<i class="dot" id="acctDot" hidden></i></button>
+      <a class="btn btn-wine sm" href="#book">Book Appointment</a>
+      <button class="burger" id="burger" aria-label="Menu"><span data-i="menu"></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"><span class="ring r1"></span><span class="ring r2"></span><span class="blob"></span></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="line"></span> Boutique · Rentals · Stitching School</p>
+          <h1 class="reveal d1">Made for you.<br><em>Or borrowed</em> for the night.</h1>
+          <p class="lead reveal d2">Bespoke stitching, bridal and party wear rentals, and a school that teaches the craft. Book online, follow every stage, and arrive in something unforgettable.</p>
+          <div class="hero-actions reveal d3">
+            <a class="btn btn-wine" href="#rentals">Browse rentals <span data-i="arrow-right"></span></a>
+            <a class="btn btn-line" href="#stitching">Start a custom order</a>
+          </div>
+          <ul class="hero-points reveal d4">
+            <li><span data-i="shield-check"></span> No double-bookings, ever</li>
+            <li><span data-i="ruler"></span> Online or in-store measurements</li>
+            <li><span data-i="message-circle"></span> WhatsApp updates</li>
+          </ul>
+        </div>
+        <div class="hero-art reveal d2">
+          <div class="arch"><div class="arch-in" id="heroDress"></div></div>
+          <div class="chip-card c1"><span class="ci" data-i="calendar"></span><div><small>Next free for this gown</small><b id="heroFree">—</b></div></div>
+          <div class="chip-card c2"><span class="ci ok" data-i="scissors"></span><div><small>Order SFI-1042</small><b>Stitching in progress</b><div class="mini-bar"><i style="width:64%"></i></div></div></div>
+          <div class="chip-card c3"><span class="stars"><span data-i="star"></span><span data-i="star"></span><span data-i="star"></span><span data-i="star"></span><span data-i="star"></span></span><small>Loved by brides &amp; guests</small></div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="sec" id="services">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="eyebrow"><span class="line"></span> What we do</p>
+          <h2>One atelier, <em>four ways</em> to dress the moment</h2>
+        </header>
+        <div class="svc-grid" id="svcGrid"></div>
+      </div>
+    </section>
+
+    <!-- RENTALS -->
+    <section class="sec sec-cream" id="rentals">
+      <div class="wrap">
+        <header class="sec-head split reveal">
+          <div>
+            <p class="eyebrow"><span class="line"></span> Bridal &amp; Party Wear Rental</p>
+            <h2>The collection, <em>on your dates</em></h2>
+          </div>
+          <p class="sub">Pick your dates and we instantly show what is free. Each dress is a single physical piece, so what you see is what you get.</p>
+        </header>
+        <div class="filters reveal">
+          <div class="pills" id="catPills" role="tablist">
+            <button class="pill on" data-cat="All">All</button>
+            <button class="pill" data-cat="Bridal">Bridal wear</button>
+            <button class="pill" data-cat="Party">Party wear</button>
+          </div>
+          <div class="date-filter">
+            <label><span data-i="calendar"></span><span>From</span><input type="date" id="fFrom"></label>
+            <label><span>To</span><input type="date" id="fTo"></label>
+            <button class="btn btn-ghost xs" id="fClear" hidden>Clear</button>
+          </div>
+          <label class="size-sel"><span>Size</span>
+            <select id="fSize"><option value="">Any</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+          </label>
+        </div>
+        <p class="filter-note" id="filterNote" hidden></p>
+        <div class="dress-grid" id="dressGrid"></div>
+      </div>
+    </section>
+
+    <!-- STITCHING -->
+    <section class="sec" id="stitching">
+      <div class="wrap stitch-grid">
+        <div class="stitch-intro reveal">
+          <p class="eyebrow"><span class="line"></span> Custom Stitching</p>
+          <h2>Your design, <em>our hands</em></h2>
+          <p class="sub">Send us your idea. Choose a direct order or start with an appointment. Measurements can be shared online or taken in store.</p>
+          <ol class="steps" id="steps"></ol>
+        </div>
+        <form class="card form-card reveal d1" id="stitchForm" novalidate>
+          <h3>Request a custom order</h3>
+          <p class="muted sm-t">Takes about two minutes. No payment now.</p>
+          <div class="field-row">
+            <label class="field"><span>Your name</span><input name="name" required placeholder="e.g. Ayesha Khan" value="Ayesha Khan"></label>
+            <label class="field"><span>Phone / WhatsApp</span><input name="phone" required placeholder="03xx xxxxxxx" value="0300 5550123"></label>
+          </div>
+          <label class="field"><span>What would you like stitched?</span>
+            <div class="chips" id="garmentChips">
+              <button type="button" class="chip on">Bridal lehnga</button><button type="button" class="chip">Party maxi</button><button type="button" class="chip">Shalwar kameez</button><button type="button" class="chip">Gharara / sharara</button><button type="button" class="chip">Formal kurta set</button><button type="button" class="chip">Other</button>
+            </div>
+          </label>
+          <div class="field-row">
+            <div class="field"><span>Fabric</span>
+              <div class="seg" id="fabricSeg"><button type="button" class="on">We supply it</button><button type="button">I'll bring mine</button></div>
+            </div>
+            <label class="field"><span>Needed by</span><input type="date" name="due" id="stitchDue" required></label>
+          </div>
+          <label class="field"><span>Design notes</span><textarea name="notes" rows="2" placeholder="Neckline, sleeves, length, embroidery, colours…"></textarea></label>
+          <div class="field">
+            <span>Reference images</span>
+            <label class="drop" id="drop"><span data-i="upload"></span><b>Drop inspiration photos</b><small>JPG / PNG, up to 10 MB each</small><input type="file" id="fileIn" accept="image/*" multiple hidden></label>
+            <div class="thumbs" id="thumbs"></div>
+          </div>
+          <div class="field"><span>Measurements</span>
+            <div class="seg" id="measureSeg"><button type="button" class="on">Book in-store fitting</button><button type="button">Submit online</button></div>
+          </div>
+          <button class="btn btn-wine block" type="submit">Submit request <span data-i="arrow-right"></span></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- TRACK -->
+    <section class="track" id="track">
+      <div class="wrap track-grid">
+        <div class="reveal">
+          <p class="eyebrow light"><span class="line"></span> Order tracking</p>
+          <h2>See exactly where <em>your outfit</em> is</h2>
+          <p class="sub light">Every stage is time-stamped. When something needs your attention, we message you on WhatsApp.</p>
+          <form class="track-form" id="trackForm">
+            <input id="trackIn" value="SFI-1042" placeholder="Enter order number e.g. SFI-1042" aria-label="Order number">
+            <button class="btn btn-gold" type="submit">Track <span data-i="search"></span></button>
+          </form>
+          <p class="hint light">Try: <button class="lnk" data-code="SFI-1042">SFI-1042</button> · <button class="lnk" data-code="SFI-1045">SFI-1045</button> · <button class="lnk" data-code="SFI-1053">SFI-1053</button></p>
+        </div>
+        <div class="track-card reveal d1" id="trackCard"></div>
+      </div>
+    </section>
+
+    <!-- ACADEMY -->
+    <section class="sec" id="academy">
+      <div class="wrap">
+        <header class="sec-head split reveal">
+          <div>
+            <p class="eyebrow"><span class="line"></span> Stitching School</p>
+            <h2>Learn the <em>craft</em> properly</h2>
+          </div>
+          <p class="sub">Small batches, real tailoring and a clear path from first stitch to finished garment. Seats are limited and filled in order of admission.</p>
+        </header>
+        <div class="course-grid" id="courseGrid"></div>
+      </div>
+    </section>
+
+    <!-- BOOK -->
+    <section class="sec sec-cream" id="book">
+      <div class="wrap book-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="line"></span> Appointments</p>
+          <h2>Reserve your <em>time with us</em></h2>
+          <p class="sub">Consultations, measurements, fittings and rental try-ons. Choose a slot and we confirm it, usually within the hour.</p>
+          <div class="hours card-flat">
+            <div><span data-i="clock"></span><div><b>Mon – Sat</b><small>11:00 – 19:00</small></div></div>
+            <div><span data-i="map-pin"></span><div><b>Visit the boutique</b><small>Address to be added</small></div></div>
+            <div><span data-i="phone"></span><div><b>Call or WhatsApp</b><small>+92 300 000 0000</small></div></div>
+          </div>
+        </div>
+        <div class="card appt reveal d1">
+          <h3>1 · What do you need?</h3>
+          <div class="chips" id="apptTypes"></div>
+          <h3>2 · Pick a day</h3>
+          <div class="days" id="apptDays"></div>
+          <h3>3 · Pick a time</h3>
+          <div class="slots" id="apptSlots"></div>
+          <h3>4 · Your details</h3>
+          <div class="field-row">
+            <label class="field"><span>Name</span><input id="apName" value="Ayesha Khan"></label>
+            <label class="field"><span>Phone / WhatsApp</span><input id="apPhone" value="0300 5550123"></label>
+          </div>
+          <button class="btn btn-wine block" id="apptGo">Request this slot <span data-i="arrow-right"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE -->
+    <section class="sec" id="love">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow center"><span class="line"></span> Kind words <span class="line"></span></p><h2>Why people <em>come back</em></h2></header>
+        <div class="quotes" id="quotes"></div>
+        <p class="tiny center muted">Sample testimonials for the demo</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec sec-cream" id="faq">
+      <div class="wrap faq-grid">
+        <div class="reveal"><p class="eyebrow"><span class="line"></span> Good to know</p><h2>Policies, <em>made clear</em></h2><p class="sub">Everything is shown before you confirm. Your measurements and photos are private and only used to make your order.</p></div>
+        <div class="faq reveal d1" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-grid">
+      <div><div class="brand light"><span class="mono">SFI</span><span class="brand-t"><b>Surayya Farhat Imtiaz</b><small>Boutique · Atelier · Academy</small></span></div>
+        <p class="muted-l">Custom stitching, bridal and party wear rentals, and a stitching school.</p></div>
+      <div><h4>Explore</h4><a href="#rentals">Rentals</a><a href="#stitching">Custom stitching</a><a href="#academy">Academy</a><a href="#track">Track order</a></div>
+      <div><h4>Visit</h4><span>Mon – Sat, 11:00 – 19:00</span><span>Address to be added</span><span>WhatsApp: +92 300 000 0000</span></div>
+    </div>
+    <div class="wrap foot-bot"><span>© <span id="yr"></span> Surayya Farhat Imtiaz</span><span>Design preview · sample content &amp; placeholder imagery</span></div>
+  </footer>
+
+  <a class="wa" id="waFab" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span data-i="message-circle"></span><b>Chat with us</b></a>
+</div>
+
+<!-- ================= OWNER DASHBOARD ================= -->
+<div id="admin" hidden>
+  <aside class="side" id="side">
+    <div class="side-brand"><span class="mono">SFI</span><div><b>Surayya Farhat</b><small>Studio Console</small></div></div>
+    <nav id="sideNav" class="side-nav"></nav>
+    <div class="side-foot">
+      <button class="btn btn-ghost-l sm block" id="resetDemo"><span data-i="refresh-cw"></span> Reset demo data</button>
+      <div class="me"><span class="av">SF</span><div><b>Surayya F. Imtiaz</b><small>Owner · Super admin</small></div></div>
+    </div>
+  </aside>
+  <div class="side-scrim" id="sideScrim"></div>
+  <div class="adm-main">
+    <header class="adm-top">
+      <button class="burger dark" id="admBurger" aria-label="Menu"><span data-i="menu"></span></button>
+      <div class="adm-title"><h1 id="admTitle">Overview</h1><p id="admSub"></p></div>
+      <div class="adm-tools">
+        <label class="search"><span data-i="search"></span><input placeholder="Search orders, customers, dresses…" id="admSearch"></label>
+        <button class="icon-btn" id="bell" aria-label="Notifications"><span data-i="bell"></span><i class="badge" id="bellBadge" hidden>0</i></button>
+      </div>
+    </header>
+    <main class="adm-body" id="admBody"></main>
+  </div>
+</div>
+
+<!-- mode switch -->
+<div class="mode" id="mode" role="tablist" aria-label="Demo view">
+  <span class="mode-hl" id="modeHl"></span>
+  <button role="tab" data-mode="customer" class="on"><span data-i="eye"></span> Customer site</button>
+  <button role="tab" data-mode="admin"><span data-i="layout-dashboard"></span> Owner dashboard<i class="badge" id="modeBadge" hidden>0</i></button>
+</div>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" hidden></aside>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/dress.js"></script>
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/customer.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
